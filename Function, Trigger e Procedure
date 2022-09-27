@@ -1,0 +1,51 @@
+Função
+
+A função ou function traduzido para o inglês podem aceitar parâmetros e efetuar cálculos lógicos e complexos e retorna valores ou tabelas. Os tipos de function são Escalares: que retornam um único valor; Ou Table - Valued: que retornam um conjunto de resultados, algumas das desvantagens do function são que, não pode usar um bloco  “Try … Catch”; Ela não pode retornar tipos de dados text, ntext, image, cursor ou timestamp; Funções definidas pelo usuário (FDU) não podem mudar o estado do banco;
+O uso das funções dentro de um SELECT pode afetar negativamente o desempenho da query;
+	A diferença entre Funções e Stored Procedures: A diferença mais notável é que as funções table-valued podem ser utilizadas em uma instrução SELECT, de modo que podem ser unidas a tabelas, views e até outras funções. Os stored procedures não podem ser usados dessa maneira.
+
+Exemplo de função: 
+DELIMITER //
+CREATE FUNCTION nome (nome_u VARCHAR(100))02/
+RETURNS VARCHAR(100) DETERMINISTIC
+BEGIN
+	DECLARE frase VARCHAR(200);
+    SET frase = CONCAT("OLÁ ", nome_u);
+	RETURN frase;
+END;
+//
+DELIMITER ;
+
+SELECT nome("Michael Jackson"); 
+
+
+
+Trigger
+
+A aplicação desta função está diretamente ligada ao nome, ou seja, é uma reação a alguma situação. Geralmente essas ações derivam de alterações nas tabelas por meio de operações de inserção, exclusão e atualização de dados (insert, delete e update). Então, a trigger está diretamente ligada a uma TABELA.
+Exemplo de aplicação: Imagine uma situação em que você quer EXCLUIR o cadastro de um cliente, e nele, temos registros de valores pendentes a serem pagos. A função da trigger é BLOQUEAR a exclusão do cadastro, pois há pendências vinculadas ao mesmo.
+
+Exemplo 
+DELIMITER //
+Create trigger person_bf BEFORE UPDATE on person
+FOR EACH ROW
+IF new.age < 18 THEN
+SIGNAL SQLSTATE ‘50002’ SET MESSAGE_TEXT = ‘Pessoa deve ter mais de 18 anos’;
+end if;
+ // 
+DELIMITER ;
+
+
+
+
+Procedure
+
+Assim como uma função procedure armazena uma sequência repetitiva de comandos, aceitando parâmetros de entrada. Uma procedure pode reduzir o tráfego da rede, melhorar a performance do banco de dados, gerar tarefas agendadas, diminuir os riscos de acesso ao banco e criar rotinas de processamento. Pode ser utilizado quando se há diversas aplicações escritas em diferentes linguagens, porém que fazem uso de uma mesma função, quando se dá prioridade. Diferentemente das funções que são compiladas e executadas todas as vezes em que são chamadas, as procedures são pré-compiladas, deste modo são apenas executadas na sua chamada, e não possui um retorno como a função.
+
+DELIMITER @@
+	CREATE PROCEDURE getSegundoNome(nome VARCHAR(200))
+	BEGIN
+		DECLARE segundoNome VARCHAR(200);
+		SET segundoNome = SUBSTRING(nome, 0, ‘ ‘);
+	END;
+@@ DELIMITER ;
