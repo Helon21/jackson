@@ -11,13 +11,14 @@
 ![alt text](https://github.com/Helon21/jackson/blob/main/Listas/exercicio1.jpg)
 
 (EDUARDO)03 - Escreva uma procedure que altere o preço de um produto vendido (venda já realizada - necessário verificar a existência da venda). Não permita alterações abusivas - preço de venda abaixo do preço de custo. É possível implementar esta funcionalidade sem a procedure? Se sim, indique como, bem como as vantagens e desvantagens.
+
 (LUIS)04 - Escreva uma procedure que registre vendas de produtos e já defina o total da venda. É possível implementar a mesma funcionalidade por meio da trigger? Qual seria a diferença?
 
 DROP PROCEDURE IF EXISTS insercao_ivenda_total;
 DELIMITER //
 CREATE PROCEDURE insercao_ivenda_total(id_produto INT, id_venda INT, quantidade INT, preco_unidade DECIMAL(8,2))
 BEGIN
-	DECLARE total_ivenda INT;
+    DECLARE total_ivenda INT;
     INSERT INTO ivenda (produto_id,venda_id,quantidade,preco_unidade) VALUES 
     (id_produto, id_venda, quantidade, preco_unidade);
     SET total_item_venda = quantidade * preco_unidade;
@@ -33,6 +34,7 @@ DELIMITER ;
 
 (DA HORA)05- Para o controle de salário de funcionários de uma empresa e os respectivos adiantamentos (vales):
  - quais tabelas são necessárias?
+ - 
 (INDIVIDUAL)06- De acordo com o seu projeto de banco de dados, pense em pelo menos 3 procedures úteis. Discuta com os seus colegas em relação a relevância e implemente-as.
 
 Luis - Função que insere aluno e já verifica se esse é maior de idade, passando para a coluna maior_idade que pode receber ‘S’ ou ‘N’. Nesse caso poderia ser resolvido também trigger ou passando como uma função para uma coluna virtual.
@@ -56,7 +58,6 @@ BEGIN
 END;
 //
 DELIMITER ;
-
 
 Helon - Excluir clientes inativos
 
