@@ -4,11 +4,11 @@
 - Faça a terceira que gere erro, impedindo a ação;
 - Faça a quarta com if e else. 
 
-![alt text](https://github.com/Helon21/jackson/blob/main/exercicio1.jpg?raw=true)
+![alt text](https://github.com/Helon21/jackson/blob/main/Listas/exercicio1.jpg)
 
 (YAGO)02 - Escreva uma procedure que registre a baixa de um produto e já atualize devidamente o estoque do produto. Antes das ações, verifique se o produto é ativo.
 
-![alt text](https://github.com/Helon21/jackson/blob/main/exercicio2.jpg?raw=true)
+![alt text](https://github.com/Helon21/jackson/blob/main/Listas/exercicio1.jpg)
 
 (EDUARDO)03 - Escreva uma procedure que altere o preço de um produto vendido (venda já realizada - necessário verificar a existência da venda). Não permita alterações abusivas - preço de venda abaixo do preço de custo. É possível implementar esta funcionalidade sem a procedure? Se sim, indique como, bem como as vantagens e desvantagens.
 (LUIS)04 - Escreva uma procedure que registre vendas de produtos e já defina o total da venda. É possível implementar a mesma funcionalidade por meio da trigger? Qual seria a diferença?
