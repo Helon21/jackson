@@ -34,7 +34,7 @@ DELIMITER ;
 
 (DA HORA)05- Para o controle de salário de funcionários de uma empresa e os respectivos adiantamentos (vales):
  - quais tabelas são necessárias?
- - 
+
 (INDIVIDUAL)06- De acordo com o seu projeto de banco de dados, pense em pelo menos 3 procedures úteis. Discuta com os seus colegas em relação a relevância e implemente-as.
 
 Luis - Função que insere aluno e já verifica se esse é maior de idade, passando para a coluna maior_idade que pode receber ‘S’ ou ‘N’. Nesse caso poderia ser resolvido também trigger ou passando como uma função para uma coluna virtual.
