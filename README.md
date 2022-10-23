@@ -1,4 +1,4 @@
-# Jackson
+# Equipe Jackson
 Integrantes:
  - Luis Braasil - Líder
  - Helon Xavier
