@@ -1,6 +1,6 @@
-# jackson
-Líder - Luis Brasil
-Outros integrantes:
+# Jackson
+Integrantes:
+ - Luis Braasil - Líder
  - Helon Xavier
  - Eduardo Germano
  - Felipe Da Hora
