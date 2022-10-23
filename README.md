@@ -1,6 +1,6 @@
 # Equipe Jackson
 Integrantes:
- - Luis Braasil - Líder
+ - Luis Brasil - Líder
  - Helon Xavier
  - Eduardo Germano
  - Felipe Da Hora
