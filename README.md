@@ -6,3 +6,5 @@ Integrantes:
  - Eduardo Germano
  - Felipe Da Hora
  - Yago Macinelli
+
+Planilha de Auto-avaliação por aula: https://docs.google.com/spreadsheets/d/1IgomFPOc_Wqatoc_k4Bju7bQmcqgivwybcWhUqMm9sI/edit#gid=0
