@@ -126,7 +126,7 @@ DELIMITER ;
 
 -- 06- De acordo com o seu projeto de banco de dados, pense em pelo menos 3 procedures úteis. Discuta com os seus colegas em relação a relevância e implemente-as.
 
--- Procedure que deleta os cursos com mais de um ano desde sua criação que não possui nenhum aluno inscrito, essa função é um simples update mas demonstra uma aplicação de uma chamada de procedure que é mais intuitivo e menor que o código do update;  
+-- Procedure que define como inativo os cursos com mais de um ano desde sua criação que não possui nenhum aluno inscrito, essa função é um simples update mas demonstra uma aplicação de uma chamada de procedure que é mais intuitivo e menor que o código do update;  
 DELIMITER //
 CREATE PROCEDURE inativa_cursos_antigos()
 BEGIN
